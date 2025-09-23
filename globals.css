@@ -1,0 +1,35 @@
+:root {
+  --bg: #0b0b0c;
+  --fg: #f6f6f7;
+  --muted: #a7a7ad;
+  --card: #131316;
+  --accent: #2b2b33;
+  --primary: #4f46e5;
+}
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; height: 100%; background: var(--bg); color: var(--fg); }
+a { color: var(--fg); text-decoration: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.card { background: var(--card); border: 1px solid #222229; border-radius: 16px; padding: 16px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.btn { background: var(--primary); color: white; border: 0; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; }
+.btn.secondary { background: #2f2f37; }
+input, textarea, select { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #2b2b33; background: #0f0f12; color: var(--fg); }
+label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 6px; }
+small { color: var(--muted); }
+.header { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,11,12,0.65); border-bottom: 1px solid #202026; }
+.brand { display: flex; align-items: baseline; gap: 8px; }
+.brand .title { font-weight: 900; letter-spacing: -0.02em; font-size: 22px; }
+.tabs { display: inline-flex; gap: 8px; background: #121217; border: 1px solid #202026; border-radius: 12px; padding: 4px; }
+.tab { padding: 6px 10px; border-radius: 8px; cursor: pointer; color: var(--muted); }
+.tab.active { background: var(--primary); color: white; }
+.list { display: grid; gap: 8px; }
+.badge { background: #2b2b33; border: 1px solid #3b3b44; color: #cfcfd6; padding: 4px 8px; border-radius: 10px; font-size: 12px; }
+.maph { height: 420px; }
+.chatbox { height: 220px; overflow: auto; border: 1px solid #202026; border-radius: 12px; padding: 8px; background: #0f0f12; }
+.message.me { display: flex; justify-content: flex-end; }
+.message .bubble { padding: 8px 10px; border-radius: 14px; }
+.message.me .bubble { background: var(--primary); color: white; }
+.message.other .bubble { background: #26262d; color: #e8e8ee; }
+footer { opacity: 0.7; font-size: 12px; }
+.leaflet-container { background: #0f0f12; }

@@ -1,0 +1,2 @@
+-- See conversation for full version; this is the same schema block provided.
+-- (Kept short here to avoid duplication, but user should paste full version from chat)
