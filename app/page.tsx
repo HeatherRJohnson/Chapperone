@@ -1,8 +1,8 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { MapPanel } from '@/components/MapPanel';
-import { useLocalStore } from '@/lib/useLocalStore';
-import { haversineKm, minutesFromKm, OAKLAND_CENTER, withinPilot, LatLng } from '@/lib/utils';
+import MapPanel from '../MapPanel';
+import useLocalStore from '../useLocalStore';
+import { haversineKm, minutesFromKm, OAKLAND_CENTER, withinPilot, LatLng } from '../utils';
 
 type Chap = { id: string; name: string; lat: number; lng: number; safeWalks: number; memberSince: string; online: boolean };
 const SAMPLE_CHAPS: Chap[] = [
