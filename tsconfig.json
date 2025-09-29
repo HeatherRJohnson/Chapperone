@@ -1,40 +1,51 @@
-{
-  "compilerOptions": {
-    "target": "es2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/tsconfig.json b/tsconfig.json
+index 8bd1a776558007262fe185167695391f5b75349a..efeba4dee3e007ce165f327e1fe232e9c9f2f318 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -5,36 +5,39 @@
+       "dom",
+       "dom.iterable",
+       "esnext"
+     ],
+     "allowJs": false,
+     "skipLibCheck": true,
+     "strict": true,
+     "forceConsistentCasingInFileNames": true,
+     "noEmit": true,
+     "esModuleInterop": true,
+     "module": "esnext",
+     "moduleResolution": "bundler",
+     "resolveJsonModule": true,
+     "isolatedModules": true,
+     "jsx": "preserve",
+     "plugins": [
+       {
+         "name": "next"
+       }
+     ],
+     "baseUrl": ".",
+     "paths": {
+       "@/*": [
+         "./*"
+       ]
+-    }
++    },
++    "incremental": true
+   },
+   "include": [
+     "next-env.d.ts",
+     "**/*.ts",
+-    "**/*.tsx"
++    "**/*.tsx",
++    ".next/types/**/*.ts",
++    "types/**/*.d.ts"
+   ],
+   "exclude": [
+     "node_modules"
+   ]
+-}
++}
+ 
+EOF
+)
