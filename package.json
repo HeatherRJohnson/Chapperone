@@ -1,10 +1,4 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/package.json b/package.json
-index d50a76f5726f8f1b3c6d4455f623ea0f6e45d84e..e351d132eaeae663a7eaf9fc9711818db1dc73a7 100644
---- a/package.json
-+++ b/package.json
-@@ -1,27 +1,28 @@
- {
+{
    "name": "chapperone",
    "private": true,
    "version": "0.1.0",
