@@ -1,0 +1,24 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/.gitignore
+index 0000000000000000000000000000000000000000..1731cbcea32652b271db0195cebb08d917620a4d 100644
+--- a//dev/null
++++ b/.gitignore
+@@ -0,0 +1,15 @@
++node_modules/
++.next/
++.env.local
++.env
++.DS_Store
++
++# Logs
++npm-debug.log*
++yarn-debug.log*
++yarn-error.log*
++
++# Editor directories and files
++.vscode/
++.idea/
++*.swp
+ 
+EOF
+)
